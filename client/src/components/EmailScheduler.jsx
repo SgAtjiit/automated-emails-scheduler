@@ -9,10 +9,13 @@ const EmailScheduler = () => {
     const form = e.target;
     const formData = new FormData(form);
 
-    const response = await fetch("http://localhost:5000/api/schedule", {
-      method: "POST",
-      body: formData,
-    });
+    const response = await fetch(
+      "https://your-backend-url.onrender.com/api/schedule",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
 
     if (response.ok) {
       setSuccess(true);
